@@ -4,31 +4,48 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
-import { ListPage } from '../pages/list/list';
+
+import {TabContentPage} from "../pages/tab-content/tab-content";
+import {TabHomePage} from "../pages/tab-home/tab-home";
+import {TabsPage} from "../pages/tabs/tabs";
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+
+import { UmbracoServiceProvider } from '../providers/umbraco-service/umbraco-service';
+import { MockServiceProvider } from '../providers/mock-service/mock-service';
+import { HttpClientModule } from '@angular/common/http';
+
+
+
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
-    ListPage
+    TabContentPage,
+    TabHomePage,
+    TabsPage
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
+    HttpClientModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
     HomePage,
-    ListPage
+    TabHomePage,
+    TabContentPage,
+    TabsPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    UmbracoServiceProvider,
+    MockServiceProvider
   ]
 })
 export class AppModule {}

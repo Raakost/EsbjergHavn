@@ -1,0 +1,15 @@
+<!-- Page Header -->
+<ion-header>
+  <ion-navbar>
+    <ion-title>{{page.title}}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<!-- Page Content -->
+<ion-content padding>
+  <ion-tabs tabsPlacement="bottom">
+    <ion-tab [root]="homeTab" [rootParams]="page" tabIcon="home"></ion-tab>
+    <ion-tab [root]="presentTab" tabTitle="Present"></ion-tab>
+    <ion-tab [root]="pastTab" tabTitle="Past"></ion-tab>
+  </ion-tabs>
+</ion-content>
