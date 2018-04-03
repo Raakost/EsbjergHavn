@@ -1,3 +1,10 @@
 page-tab-home {
-
+  .no-padding div.scroll-content {
+    padding-right: 0px !important;
+    padding-left: 0px !important;
+    padding-top: 0px !important;
+  }
+  .img-container {
+    background-color: #616161;
+  }
 }

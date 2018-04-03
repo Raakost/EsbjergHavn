@@ -37,6 +37,7 @@ export class MyApp {
 
   openPage(page) {
     //this.nav.setRoot(page.component);
-    this.nav.push(page.component, {pageData: page});
+    this.nav.push(page.component, {data: page});
+    console.log(page);
   }
 }

@@ -4,15 +4,13 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Home</ion-title>
+    <ion-title>Havnens Historie</ion-title>
   </ion-navbar>
 </ion-header>
 
 <!-- Page Content -->
-<ion-content padding>
-  <ion-thumbnail>
-    <img src="https://placeholdit.co//i/500x400?bg=c5c4c4">
-  </ion-thumbnail>
-  <h4>Home Page Title</h4>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam porttitor quis arcu vitae interdum. Pellentesque interdum maximus scelerisque. Fusce vel purus rutrum, imperdiet odio faucibus, rutrum risus. Praesent sit amet.</p>
+<ion-content>
+    <img src={{content.Img}}>
+  <h4 style="padding-left: 16px; padding-right: 16px;">{{content.Title}}</h4>
+  <p style="padding-left: 16px; padding-right: 16px;">{{content.Text}}</p>
 </ion-content>

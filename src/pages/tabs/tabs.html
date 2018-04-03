@@ -8,8 +8,8 @@
 <!-- Page Content -->
 <ion-content padding>
   <ion-tabs tabsPlacement="bottom">
-    <ion-tab [root]="homeTab" [rootParams]="page" tabIcon="home"></ion-tab>
-    <ion-tab [root]="presentTab" tabTitle="Nutid"></ion-tab>
-    <ion-tab [root]="pastTab" tabTitle="Fortid"></ion-tab>
+    <ion-tab [root]="homeTab" [rootParams]="page.data.HomePage" tabTitle="Om"></ion-tab>
+    <ion-tab [root]="presentTab" [rootParams]="page.data.PresentList" tabTitle="Nutid"></ion-tab>
+    <ion-tab [root]="pastTab" [rootParams]="page.data.PastList"  tabTitle="Fortid"></ion-tab>
   </ion-tabs>
 </ion-content>

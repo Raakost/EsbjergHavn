@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import {Component} from '@angular/core';
+import {IonicPage, NavController, NavParams} from 'ionic-angular';
+import {PastPresentModel} from "../../models/PastPresentModel";
 
 @IonicPage()
 @Component({
@@ -8,10 +9,11 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class TabContentPage {
 
-
+  tabContent: Array<PastPresentModel>;
 
   constructor(public navCtrl: NavController,
               public navParams: NavParams) {
+    this.tabContent = navParams.data;
   }
 
   ionViewDidLoad() {

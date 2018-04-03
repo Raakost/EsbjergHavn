@@ -1,15 +1,17 @@
 export class PastPresentModel {
 
-  constructor(id: number, img: string, text: string, video: string) {
+  constructor(id: number, title: string, text: string, img: string, video?: string) {
     this.Id = id;
+    this.Title = title;
     this.Img = img;
     this.Text = text;
     this.Video = video;
   }
 
   Id: number;
+  Title: string;
   Img: string;
   Text: string;
-  Video: string;
+  Video?: string;
 
 }
