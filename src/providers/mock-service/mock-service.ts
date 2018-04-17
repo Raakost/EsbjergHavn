@@ -23,13 +23,7 @@ export class MockServiceProvider {
   present1 : PastPresentModel;
 
   constructor(public http: HttpClient) {
-    this.homePage = new HomePageModel(
-      1,
-      'Appens formål',
-      'En beskrivelse af appens formål, evt et kort med alle placeringer markeret på et kort.',
-      'https://www.dropbox.com/s/g1bn8rqzubojssn/esbjerghavn.JPG?dl=1');
-
-    this.past = new PastPresentModel(
+    /*this.past = new PastPresentModel(
       1,
       'Fortid - En titel',
       'En lille beskrivelse til billedet...',
@@ -66,7 +60,7 @@ export class MockServiceProvider {
       123467,
       7654321);
 
-    this.tabContent = new TabsContentModel(1, this.tabHomePage, this.presentImagesList, this.pastImagesList, 'https://www.youtube.com/watch?v=WCAKM2bivqo');
+    this.tabContent = new TabsContentModel(1, this.tabHomePage, this.presentImagesList, this.pastImagesList);
 
     this.pages = [
       {title: 'Fiskeri- og Søfarts Museet', component: TabsPage, data: this.tabContent},
@@ -74,6 +68,14 @@ export class MockServiceProvider {
       {title: 'Esbjerg Strand', component: TabsPage, data: this.tabContent},
       {title: 'Nordhavn', component: TabsPage, data: this.tabContent}
     ];
+
+    this.homePage = new HomePageModel(
+      1,
+      'Appens formål',
+      'En beskrivelse af appens formål, evt et kort med alle placeringer markeret på et kort.',
+      'https://www.dropbox.com/s/g1bn8rqzubojssn/esbjerghavn.JPG?dl=1',
+      [this.tabContent]
+    );*/
   };
 
   // Get tabs component and title for sidemenu navigation.

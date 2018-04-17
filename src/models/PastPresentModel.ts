@@ -10,8 +10,8 @@ export class PastPresentModel {
 
   Id: number;
   Title: string;
-  Img: string;
   Text: string;
+  Img: string;
   Video?: string;
 
 }

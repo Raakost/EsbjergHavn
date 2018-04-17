@@ -13,7 +13,8 @@ export class TabsHomePageModel {
   Text: string;
   BeforeImg: string;
   NowImg: string;
-  Longitude: number;
   Latitude: number;
+  Longitude: number;
+
 
 }
