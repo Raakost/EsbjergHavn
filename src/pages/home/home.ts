@@ -11,10 +11,13 @@ import {UmbracoServiceProvider} from "../../providers/umbraco-service/umbraco-se
 export class HomePage {
 
   content : HomePageModel;
+  image : string;
 
   constructor(public navCtrl: NavController, /*public service: MockServiceProvider,*/ public service: UmbracoServiceProvider) {
    //this.content = service.getHomePage();
-    this.service.getFrontPagecontentDa().subscribe(frontPage=> this.content = frontPage);
+    this.service.getFrontPagecontentDa().subscribe(frontPage=>
+    {this.content = frontPage,
+    this.image = 'http://localhost:52076' + this.content.Img});
   }
 
 }
