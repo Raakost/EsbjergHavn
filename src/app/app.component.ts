@@ -44,7 +44,8 @@ export class MyApp {
       let locationPages = [];
       for (let i = 0; i < this.locations.length; i++) {
         let cur = this.locations[i];
-        locationPages.push({title: cur.Title, component: TabHomePage, data: cur})
+        locationPages.push({title: cur.Title, component: TabHomePage, data: cur});
+        console.log(cur.Id);
       }
       this.pages = locationPages;
     });

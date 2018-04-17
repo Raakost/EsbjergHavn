@@ -10,11 +10,13 @@ declare var $: any;
 })
 
 export class TabHomePage {
-  tabHomeContent: TabsHomePageModel;
+
+  tabHomeContent: any = undefined;
 
   constructor(public navCtrl: NavController,
               public navParams: NavParams) {
     this.tabHomeContent = navParams.data;
+    console.log(this.tabHomeContent.Id);
 
   }
 
