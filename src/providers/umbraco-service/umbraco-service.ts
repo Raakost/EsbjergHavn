@@ -5,12 +5,7 @@ import "rxjs/Rx";
 import {TabsContentModel} from "../../models/TabsContentModel";
 import {HomePageModel} from "../../models/HomePageModel";
 
-/*
-  Generated class for the UmbracoServiceProvider provider.
 
-  See https://angular.io/guide/dependency-injection for more info on providers
-  and Angular DI.
-*/
 @Injectable()
 export class UmbracoServiceProvider {
 

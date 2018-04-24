@@ -6,8 +6,8 @@
 <ion-content class="no-padding" *ngIf="tabHomeContent">
   <div class="img-container">
   <div id="container1" class="twentytwenty-container">
-    <img (load)="initTwenty()" src={{imageBefore}}>
-    <img (load)="initTwenty()" src={{imageNow}}>
+    <img (load)="initTwenty()" src={{tabHomeContent.BeforeImg}}>
+    <img (load)="initTwenty()" src={{tabHomeContent.NowImg}}>
     </div>
   </div>
   <p style="padding-right: 16px; padding-left: 16px;">{{tabHomeContent.Text}}</p>
