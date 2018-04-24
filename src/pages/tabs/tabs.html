@@ -1,13 +1,13 @@
 <!-- Page Header -->
 <ion-header>
-  <ion-navbar *ngIf="page">
-    <ion-title>{{page.Title}}</ion-title>
+  <ion-navbar *ngIf="page" color="dark-blue">
+    <ion-title style="font-family:roboto sans-serif, Arima Madurai;">{{page.Title}}</ion-title>
   </ion-navbar>
 </ion-header>
 
 <!-- Page Content -->
 <ion-content padding *ngIf="page">
-  <ion-tabs tabsPlacement="bottom">
+  <ion-tabs tabsPlacement="bottom" color="dark-blue">
     <ion-tab [root]="homeTab" [rootParams]="page.HomePage" tabTitle="Om"></ion-tab>
     <ion-tab [root]="presentTab" [rootParams]="page.PresentList" tabTitle="Erindringer"></ion-tab>
     <ion-tab [root]="pastTab" [rootParams]="page.PastList"  tabTitle="Historie"></ion-tab>

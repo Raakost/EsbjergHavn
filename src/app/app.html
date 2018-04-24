@@ -1,8 +1,9 @@
+
 <ion-menu [content]="content">
   <ion-header>
-    <ion-toolbar>
+    <ion-toolbar color="dark-blue">
       <div class="row">
-      <ion-title>Lokationer</ion-title>
+      <ion-title style="font-family: roboto sans-serif, Arima Madurai;">Lokationer</ion-title>
       <button icon-only (click)="presentPopover($event)" style="background-color: transparent;">
         <ion-icon name="settings"></ion-icon>
       </button>
@@ -16,14 +17,6 @@
         {{p.title}}
       </button>
     </ion-list>
-    <!--<div class="row" style="position: absolute;bottom: 0;right: 0;">
-      <button no-margin no-padding ion-button small style="width: 50%; background-color: transparent;">
-        <img src="assets/icon/da.png"/>
-      </button>
-      <button no-margin no-padding ion-button small style="width: 50%; background-color: transparent;">
-        <img src="assets/icon/gb.png"/>
-      </button>
-    </div>-->
   </ion-content>
 
 </ion-menu>

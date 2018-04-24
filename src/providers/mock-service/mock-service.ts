@@ -1,6 +1,5 @@
 import {HttpClient} from '@angular/common/http';
 import {Injectable} from '@angular/core';
-import {TabsPage} from "../../pages/tabs/tabs";
 import {TabsContentModel} from "../../models/TabsContentModel";
 import {PastPresentModel} from "../../models/PastPresentModel";
 import {TabsHomePageModel} from "../../models/TabsHomePageModel";
