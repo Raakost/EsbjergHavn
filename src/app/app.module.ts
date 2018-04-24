@@ -15,6 +15,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { UmbracoServiceProvider } from '../providers/umbraco-service/umbraco-service';
 import { MockServiceProvider } from '../providers/mock-service/mock-service';
 import { HttpClientModule } from '@angular/common/http';
+import {SettingsPage} from "../pages/settings/settings";
 
 
 
@@ -25,7 +26,8 @@ import { HttpClientModule } from '@angular/common/http';
     HomePage,
     TabContentPage,
     TabHomePage,
-    TabsPage
+    TabsPage,
+    SettingsPage
   ],
   imports: [
     BrowserModule,
@@ -38,7 +40,8 @@ import { HttpClientModule } from '@angular/common/http';
     HomePage,
     TabHomePage,
     TabContentPage,
-    TabsPage
+    TabsPage,
+    SettingsPage
   ],
   providers: [
     StatusBar,

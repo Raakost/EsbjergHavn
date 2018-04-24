@@ -2,12 +2,14 @@ import { Component, ViewChild } from '@angular/core';
 import { Nav, Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { PopoverController } from 'ionic-angular';
 
 import { HomePage } from '../pages/home/home';
 
 import {UmbracoServiceProvider} from "../providers/umbraco-service/umbraco-service";
 import {TabsContentModel} from "../models/TabsContentModel";
 import {TabsPage} from "../pages/tabs/tabs";
+import {SettingsPage} from "../pages/settings/settings";
 
 
 @Component({
@@ -20,9 +22,17 @@ export class MyApp {
   pages: Array<{title: string, component: any, data: TabsContentModel}>;
   locations: Array<TabsContentModel> = [];
 
-  constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen, public service: UmbracoServiceProvider) {
+  constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen, public service: UmbracoServiceProvider, public popoverCtrl: PopoverController) {
+
     this.initializeApp();
     this.startApp();
+  }
+
+  presentPopover(myEvent) {
+    let popover = this.popoverCtrl.create(SettingsPage);
+    popover.present({
+      ev: myEvent
+    });
   }
 
   initializeApp() {
