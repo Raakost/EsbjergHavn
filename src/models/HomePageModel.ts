@@ -1,5 +1,3 @@
-import {TabsContentModel} from "./TabsContentModel";
-
 export class HomePageModel {
 
   constructor(id: number, title: string, text: string, img: string) {

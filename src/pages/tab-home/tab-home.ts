@@ -1,6 +1,6 @@
 import {Component} from '@angular/core';
 import {IonicPage, NavController, NavParams} from 'ionic-angular';
-import {TabsHomePageModel} from "../../models/TabsHomePageModel";
+
 declare var $: any;
 
 @IonicPage()
@@ -12,12 +12,14 @@ declare var $: any;
 export class TabHomePage {
 
   tabHomeContent: any = undefined;
+  imageBefore : string;
+  imageNow : string;
 
   constructor(public navCtrl: NavController,
               public navParams: NavParams) {
     this.tabHomeContent = navParams.data;
-    console.log(this.tabHomeContent.Id);
-
+    this.imageBefore = 'http://localhost:52076' + this.tabHomeContent.BeforeImg;
+    this.imageNow = 'http://localhost:52076' + this.tabHomeContent.NowImg;
   }
 
   initTwenty() {

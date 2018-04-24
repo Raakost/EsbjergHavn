@@ -16,7 +16,7 @@ export class TabsPage {
   pastTab = TabContentPage;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
-    this.page = navParams.get('data');
+    this.page = navParams.data;
   }
 
   ionViewDidLoad() {

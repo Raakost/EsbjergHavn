@@ -1,15 +1,15 @@
 <!-- Page Header -->
 <ion-header>
-  <ion-navbar>
-    <ion-title>{{page.title}}</ion-title>
+  <ion-navbar *ngIf="page">
+    <ion-title>{{page.Title}}</ion-title>
   </ion-navbar>
 </ion-header>
 
 <!-- Page Content -->
-<ion-content padding>
+<ion-content padding *ngIf="page">
   <ion-tabs tabsPlacement="bottom">
-    <ion-tab [root]="homeTab" [rootParams]="page.data.HomePage" tabTitle="Om"></ion-tab>
-    <ion-tab [root]="presentTab" [rootParams]="page.data.PresentList" tabTitle="Erindringer"></ion-tab>
-    <ion-tab [root]="pastTab" [rootParams]="page.data.PastList"  tabTitle="Historie"></ion-tab>
+    <ion-tab [root]="homeTab" [rootParams]="page.HomePage" tabTitle="Om"></ion-tab>
+    <ion-tab [root]="presentTab" [rootParams]="page.PresentList" tabTitle="Erindringer"></ion-tab>
+    <ion-tab [root]="pastTab" [rootParams]="page.PastList"  tabTitle="Historie"></ion-tab>
   </ion-tabs>
 </ion-content>
