@@ -1,5 +1,6 @@
 import {Component} from '@angular/core';
 import {IonicPage, NavController, NavParams} from 'ionic-angular';
+import {LaunchNavigator} from "@ionic-native/launch-navigator";
 
 declare var $: any;
 
@@ -16,7 +17,8 @@ export class TabHomePage {
   //imageNow : string;
 
   constructor(public navCtrl: NavController,
-              public navParams: NavParams) {
+              public navParams: NavParams,
+              private launchNavigator: LaunchNavigator) {
     this.tabHomeContent = navParams.data;
    // this.imageBefore = 'http://localhost:52076' + this.tabHomeContent.BeforeImg;
     //this.imageNow = 'http://localhost:52076' + this.tabHomeContent.NowImg;
@@ -35,6 +37,14 @@ export class TabHomePage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad TabHomePage');
+  }
+
+  Navigation(){
+    var lat = 55.4666;
+    var long = 8.4615;
+
+    var havneCoords = lat.toString() + ", " + long.toString();
+    this.launchNavigator.navigate(havneCoords);
   }
 
 }

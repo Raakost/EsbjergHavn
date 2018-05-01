@@ -11,6 +11,7 @@ import {TabsPage} from "../pages/tabs/tabs";
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import {LaunchNavigator} from "@ionic-native/launch-navigator";
 
 import { UmbracoServiceProvider } from '../providers/umbraco-service/umbraco-service';
 import { MockServiceProvider } from '../providers/mock-service/mock-service';
@@ -48,7 +49,8 @@ import {SettingsPage} from "../pages/settings/settings";
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     UmbracoServiceProvider,
-    MockServiceProvider
+    MockServiceProvider,
+    LaunchNavigator
   ]
 })
 export class AppModule {}
