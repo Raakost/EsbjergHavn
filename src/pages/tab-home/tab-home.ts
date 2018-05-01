@@ -12,14 +12,10 @@ declare var $: any;
 export class TabHomePage {
 
   tabHomeContent: any = undefined;
-  //imageBefore : string;
-  //imageNow : string;
 
   constructor(public navCtrl: NavController,
               public navParams: NavParams) {
     this.tabHomeContent = navParams.data;
-   // this.imageBefore = 'http://localhost:52076' + this.tabHomeContent.BeforeImg;
-    //this.imageNow = 'http://localhost:52076' + this.tabHomeContent.NowImg;
   }
 
   initTwenty() {
