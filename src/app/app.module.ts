@@ -17,6 +17,7 @@ import { UmbracoServiceProvider } from '../providers/umbraco-service/umbraco-ser
 import { MockServiceProvider } from '../providers/mock-service/mock-service';
 import { HttpClientModule } from '@angular/common/http';
 import {SettingsPage} from "../pages/settings/settings";
+import {TranslateModule} from '@ngx-translate/core';
 
 
 
@@ -33,7 +34,8 @@ import {SettingsPage} from "../pages/settings/settings";
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
-    HttpClientModule
+    HttpClientModule,
+    TranslateModule.forRoot()
   ],
   bootstrap: [IonicApp],
   entryComponents: [
