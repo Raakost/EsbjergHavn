@@ -12,5 +12,7 @@
     </div>
   </div>
   <p style="padding-right: 16px; padding-left: 16px;">{{tabHomeContent.Text}}</p>
-  <button (click)="Navigation()" icon-only style="background-color: transparent;"><ion-icon color="dark-blue" name="navigate"></ion-icon></button>
+  <ion-fab bottom right>
+    <button color="dark-blue"  (click)="Navigation()" ion-fab><img src="assets/icon/map-location.png"></button>
+  </ion-fab>
 </ion-content>
