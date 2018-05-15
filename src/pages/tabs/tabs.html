@@ -8,8 +8,8 @@
 <!-- Page Content -->
 <ion-content padding *ngIf="page">
   <ion-tabs tabsPlacement="bottom" color="dark-blue">
-    <ion-tab [root]="homeTab" [rootParams]="page.HomePage" tabTitle="Om"></ion-tab>
-    <ion-tab [root]="presentTab" [rootParams]="page.PresentList" tabTitle="Erindringer"></ion-tab>
-    <ion-tab [root]="pastTab" [rootParams]="page.PastList"  tabTitle="Historie"></ion-tab>
+    <ion-tab [root]="homeTab" [rootParams]="page.HomePage" tabTitle="{{om | translate}}"></ion-tab>
+    <ion-tab [root]="presentTab" [rootParams]="page.PresentList" tabTitle="{{erindringer | translate}}"></ion-tab>
+    <ion-tab [root]="pastTab" [rootParams]="page.PastList"  tabTitle="{{historie | translate}}"></ion-tab>
   </ion-tabs>
 </ion-content>

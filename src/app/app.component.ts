@@ -10,6 +10,7 @@ import {UmbracoServiceProvider} from "../providers/umbraco-service/umbraco-servi
 import {TabsContentModel} from "../models/TabsContentModel";
 import {TabsPage} from "../pages/tabs/tabs";
 import {SettingsPage} from "../pages/settings/settings";
+import {TranslateService} from '@ngx-translate/core';
 
 
 @Component({
@@ -20,11 +21,13 @@ export class MyApp {
 
   rootPage: any = HomePage;
   pages: Array<{title: string, component: any, data: TabsContentModel}>;
+  chosenLang: string;
   locations: Array<TabsContentModel> = [];
 
-  constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen, public service: UmbracoServiceProvider, public popoverCtrl: PopoverController) {
-
+  constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen, public service: UmbracoServiceProvider, public popoverCtrl: PopoverController, private translateService: TranslateService) {
+    translateService.setDefaultLang('dk');
     this.initializeApp();
+    this.chosenLang = translateService.getDefaultLang();
     this.startApp();
   }
 

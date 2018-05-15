@@ -15,12 +15,14 @@ import {LaunchNavigator} from "@ionic-native/launch-navigator";
 
 import { UmbracoServiceProvider } from '../providers/umbraco-service/umbraco-service';
 import { MockServiceProvider } from '../providers/mock-service/mock-service';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
 import {SettingsPage} from "../pages/settings/settings";
-import {TranslateModule} from '@ngx-translate/core';
+import {TranslateModule, TranslateLoader} from '@ngx-translate/core';
+import {TranslateHttpLoader} from "@ngx-translate/http-loader";
 
-
-
+export function setTranslateLoader(http: HttpClient) {
+  return new TranslateHttpLoader(http, './assets/i18n/', '.json');
+}
 
 @NgModule({
   declarations: [
@@ -35,7 +37,13 @@ import {TranslateModule} from '@ngx-translate/core';
     BrowserModule,
     IonicModule.forRoot(MyApp),
     HttpClientModule,
-    TranslateModule.forRoot()
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: (setTranslateLoader),
+        deps: [HttpClient]
+      }
+    })
   ],
   bootstrap: [IonicApp],
   entryComponents: [

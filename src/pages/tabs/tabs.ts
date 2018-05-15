@@ -11,6 +11,9 @@ import {TabHomePage} from "../tab-home/tab-home";
 export class TabsPage {
 
   page: any;
+  om: string = 'om';
+  historie: string = 'historie';
+  erindringer: string = 'erindringer';
   homeTab = TabHomePage;
   presentTab = TabContentPage;
   pastTab = TabContentPage;
