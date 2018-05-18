@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import {IonicPage, NavController, NavParams} from 'ionic-angular';
+import {IonicPage, NavParams} from 'ionic-angular';
 import {LaunchNavigator} from "@ionic-native/launch-navigator";
 
 declare var $: any;
@@ -14,8 +14,7 @@ export class TabHomePage {
 
   tabHomeContent: any = undefined;
 
-  constructor(public navCtrl: NavController,
-              public navParams: NavParams,
+  constructor( public navParams: NavParams,
               private launchNavigator: LaunchNavigator) {
     this.tabHomeContent = navParams.data;
   }

@@ -12,7 +12,6 @@ import {TabsPage} from "../pages/tabs/tabs";
 import {SettingsPage} from "../pages/settings/settings";
 import {LangChangeEvent, TranslateService} from '@ngx-translate/core';
 
-
 @Component({
   templateUrl: 'app.html'
 })
@@ -49,7 +48,7 @@ export class MyApp {
       this.statusBar.styleDefault();
       setTimeout(() => {
         this.splashScreen.hide();
-      }, 3000);
+      }, 500);
     });
   }
 

@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import {IonicPage, NavController, NavParams} from 'ionic-angular';
+import {IonicPage, NavParams} from 'ionic-angular';
 import {TabContentPage} from "../tab-content/tab-content";
 import {TabHomePage} from "../tab-home/tab-home";
 
@@ -11,14 +11,11 @@ import {TabHomePage} from "../tab-home/tab-home";
 export class TabsPage {
 
   page: any;
-  om: string = 'om';
-  historie: string = 'historie';
-  erindringer: string = 'erindringer';
   homeTab = TabHomePage;
   presentTab = TabContentPage;
   pastTab = TabContentPage;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navParams: NavParams) {
     this.page = navParams.data;
   }
 
