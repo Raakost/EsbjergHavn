@@ -3,9 +3,14 @@
   <ion-header>
     <ion-toolbar color="dark-blue">
       <div class="row">
-      <ion-title style="font-family: roboto sans-serif, Arima Madurai;">Lokationer</ion-title>
+      <ion-title style="font-family: roboto sans-serif, Arima Madurai;">{{'LOCATION' | translate}}</ion-title>
       <button icon-only (click)="presentPopover($event)" style="background-color: transparent;">
-        <img style="width: 2.8em;" src="assets/icon/daEn.png">
+        <div *ngIf="chosenLang == 'da'">
+          <img style="width: 2.4em;" src="assets/icon/daEn.png">
+        </div>
+        <div *ngIf="chosenLang == 'en'">
+          <img style="width: 2.4em;" src="assets/icon/enDa.png">
+        </div>
       </button>
       </div>
     </ion-toolbar>

@@ -25,7 +25,7 @@ export class MyApp {
   locations: Array<TabsContentModel> = [];
 
   constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen, public service: UmbracoServiceProvider, public popoverCtrl: PopoverController, private translateService: TranslateService) {
-    translateService.setDefaultLang('dk');
+    translateService.setDefaultLang('da');
     this.initializeApp();
     this.chosenLang = translateService.getDefaultLang();
     this.startApp();
@@ -46,7 +46,7 @@ export class MyApp {
   }
 
   startApp() {
-    this.service.getContentDa().subscribe(result => {
+    this.service.getContent(this.chosenLang).subscribe(result => {
       this.locations = result;
       let locationPages = [];
       for (let i = 0; i < this.locations.length; i++) {
@@ -60,4 +60,11 @@ export class MyApp {
   openPage(page) {
     this.nav.push(page.component, page.data);
   }
+
+  changeLanguage(language){
+    this.translateService.use(language);
+    this.chosenLang = language;
+    this.startApp();
+  }
+
 }

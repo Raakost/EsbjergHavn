@@ -1,5 +1,9 @@
 {
-  "om": "About",
-  "erindringer" : "Memories",
-  "historie": "History"
+  "TAB_ABOUT": "About",
+  "TAB_MEMORY" : "Memories",
+  "TAB_HISTORY": "History",
+  "LOCATION" : "Locations",
+  "APP_TITLE" : "Port of Esbjerg",
+  "DA" : "Danish",
+  "EN" : "English"
 }

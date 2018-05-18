@@ -1,10 +1,10 @@
 <ion-list>
-  <button ion-item (click)="close()">
+  <button ion-item (click)="changeLanguage('da')">
     <img style="width: 1em;" src="assets/icon/da.png">
-    Dansk
+    {{'DA' | translate}}
   </button>
-  <button ion-item (click)="close()">
-    <img style="width: 1em;" src="assets/icon/en.png">
-    Engelsk
-  </button>
+    <button ion-item (click)="changeLanguage('en')">
+      <img style="width: 1em;" src="assets/icon/en.png">
+      {{'EN' | translate}}
+    </button>
 </ion-list>
