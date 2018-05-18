@@ -1,4 +1,4 @@
-import { Component, ViewChild } from '@angular/core';
+import {Component, ViewChild} from '@angular/core';
 import { Nav, Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -10,7 +10,7 @@ import {UmbracoServiceProvider} from "../providers/umbraco-service/umbraco-servi
 import {TabsContentModel} from "../models/TabsContentModel";
 import {TabsPage} from "../pages/tabs/tabs";
 import {SettingsPage} from "../pages/settings/settings";
-import {TranslateService} from '@ngx-translate/core';
+import {LangChangeEvent, TranslateService} from '@ngx-translate/core';
 
 
 @Component({
@@ -24,24 +24,32 @@ export class MyApp {
   chosenLang: string;
   locations: Array<TabsContentModel> = [];
 
-  constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen, public service: UmbracoServiceProvider, public popoverCtrl: PopoverController, private translateService: TranslateService) {
+  constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen, public service: UmbracoServiceProvider, public popoverCtrl: PopoverController, public translateService: TranslateService) {
     translateService.setDefaultLang('da');
     this.initializeApp();
     this.chosenLang = translateService.getDefaultLang();
     this.startApp();
   }
 
-  presentPopover(myEvent) {
+  presentPopover(optionsEvent) {
     let popover = this.popoverCtrl.create(SettingsPage);
     popover.present({
-      ev: myEvent
+      ev: optionsEvent
+    });
+    this.translateService.onLangChange.subscribe((event : LangChangeEvent)=> {
+      this.service.getContent(event.lang);
+      this.chosenLang = this.translateService.currentLang;
+      console.log(this.chosenLang);
+      this.startApp();
     });
   }
 
   initializeApp() {
     this.platform.ready().then(() => {
       this.statusBar.styleDefault();
-      this.splashScreen.hide();
+      setTimeout(() => {
+        this.splashScreen.hide();
+      }, 3000);
     });
   }
 
@@ -60,11 +68,4 @@ export class MyApp {
   openPage(page) {
     this.nav.push(page.component, page.data);
   }
-
-  changeLanguage(language){
-    this.translateService.use(language);
-    this.chosenLang = language;
-    this.startApp();
-  }
-
 }

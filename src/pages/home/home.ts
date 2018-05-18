@@ -12,12 +12,11 @@ export class HomePage {
 
   content : HomePageModel;
 
-  constructor(public navCtrl: NavController, public service: UmbracoServiceProvider, public translateService : TranslateService) {
+  constructor( public service: UmbracoServiceProvider, public translateService : TranslateService) {
     this.getFrontPageContent();
     translateService.onLangChange.subscribe((event : LangChangeEvent)=> {
       this.getFrontPageContent(event.lang);
     });
-
   }
 
   getFrontPageContent(language? : string){
