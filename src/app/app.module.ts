@@ -19,6 +19,7 @@ import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { SettingsPage } from "../pages/settings/settings";
 import { TranslateModule, TranslateLoader} from '@ngx-translate/core';
 import { TranslateHttpLoader } from "@ngx-translate/http-loader";
+import {TabMapPage} from "../pages/tab-map/tab-map";
 
 
 
@@ -33,6 +34,7 @@ export function setTranslateLoader(http: HttpClient) {
     TabContentPage,
     TabHomePage,
     TabsPage,
+    TabMapPage,
     SettingsPage
   ],
   imports: [
@@ -53,6 +55,7 @@ export function setTranslateLoader(http: HttpClient) {
     HomePage,
     TabHomePage,
     TabContentPage,
+    TabMapPage,
     TabsPage,
     SettingsPage
   ],

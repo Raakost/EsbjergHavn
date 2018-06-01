@@ -12,7 +12,19 @@
     </div>
   </div>
   <p style="padding-right: 16px; padding-left: 16px;">{{tabHomeContent.Text}}</p>
-  <ion-fab bottom right>
-    <button color="dark-blue"  (click)="Navigation()" ion-fab><img src="assets/icon/map-location.png"></button>
-  </ion-fab>
+  <div>
+    <button style="background-color: transparent;
+                   text-decoration: underline;
+                   color: #488aff;
+                   line-height: 1.5;
+                   font-size: 1.5rem;
+                   float: right;
+                   padding-right: 16px;"
+            (click)="Navigation()">{{'DIRECTIONS' | translate}}</button>
+    <ion-icon style="float: right;
+                     line-height: 1.5;
+                     text-decoration: underline;
+                     color: #488aff;"
+              name="map"></ion-icon>
+  </div>
 </ion-content>
