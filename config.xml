@@ -85,5 +85,11 @@
     <plugin name="cordova-plugin-ionic-webview" spec="^1.1.16" />
     <plugin name="cordova-plugin-ionic-keyboard" spec="^2.0.5" />
     <plugin name="uk.co.workingedge.phonegap.plugin.launchnavigator" spec="^4.2.0" />
-    <engine name="android" spec="~6.3.0" />
+    <plugin name="cordova-plugin-googlemaps" spec="^2.3.6">
+        <variable name="API_KEY_FOR_ANDROID" value="AIzaSyAiUCL-pBEJcaxB1dFQP-YB7tlTyQ3PTUQ" />
+        <variable name="API_KEY_FOR_IOS" value="AIzaSyAiUCL-pBEJcaxB1dFQP-YB7tlTyQ3PTUQ" />
+        <variable name="PLAY_SERVICES_VERSION" value="15.0.1" />
+        <variable name="ANDROID_SUPPORT_V4_VERSION" value="26.1.0" />
+    </plugin>
+    <engine name="android" spec="6.3.0" />
 </widget>

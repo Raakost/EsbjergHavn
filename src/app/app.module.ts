@@ -20,7 +20,7 @@ import { SettingsPage } from "../pages/settings/settings";
 import { TranslateModule, TranslateLoader} from '@ngx-translate/core';
 import { TranslateHttpLoader } from "@ngx-translate/http-loader";
 import {TabMapPage} from "../pages/tab-map/tab-map";
-
+import { GoogleMaps } from '@ionic-native/google-maps';
 
 
 export function setTranslateLoader(http: HttpClient) {
@@ -65,7 +65,8 @@ export function setTranslateLoader(http: HttpClient) {
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     UmbracoServiceProvider,
     MockServiceProvider,
-    LaunchNavigator
+    LaunchNavigator,
+    GoogleMaps
   ]
 })
 export class AppModule {}

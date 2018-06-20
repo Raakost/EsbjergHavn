@@ -9,8 +9,8 @@ import { HomePageModel } from "../../models/HomePageModel";
 @Injectable()
 export class UmbracoServiceProvider {
 
-  _contentUrl : string = 'http://havnen.samrum.dk/umbraco/api/home/getcontent?lang=';
-  _fpUrl : string = 'http://havnen.samrum.dk/umbraco/api/home/GetHomePageModel?lang=';
+  _contentUrl : string = 'http://havnen150.dk/umbraco/api/home/getcontent?lang=';
+  _fpUrl : string = 'http://havnen150.dk/umbraco/api/home/GetHomePageModel?lang=';
 
   constructor(public http: HttpClient) {
   }

@@ -3,21 +3,21 @@
   <ion-header>
     <ion-toolbar color="dark-blue">
       <div class="row">
-      <ion-title style="font-family: roboto sans-serif, Arima Madurai;">{{'LOCATION' | translate}}</ion-title>
-      <button icon-only (click)="presentPopover($event)" style="background-color: transparent;">
+      <ion-title style="font-family: Coda;">{{'LOCATION' | translate}}</ion-title>
+      <!--<button icon-only (click)="presentPopover($event)" style="background-color: transparent;">
         <div *ngIf="chosenLang == 'da'">
           <img style="width: 2.4em;" src="assets/icon/daEn.png">
         </div>
         <div *ngIf="chosenLang == 'en'">
           <img style="width: 2.4em;" src="assets/icon/enDa.png">
         </div>
-      </button>
+      </button>-->
       </div>
     </ion-toolbar>
   </ion-header>
-  <ion-content>
+  <ion-content style="background-color: #193441;">
     <ion-list>
-      <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
+      <button color="dark-blue" menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
         {{p.title}}
       </button>
     </ion-list>

@@ -4,27 +4,18 @@
 </ion-header>
 
 <!-- Page content -->
-<ion-content class="no-padding" *ngIf="tabHomeContent">
+<ion-content class="no-padding bg" *ngIf="tabHomeContent">
   <div class="img-container">
   <div id="container1" class="twentytwenty-container">
     <img (load)="initTwenty()" src={{tabHomeContent.BeforeImg}}>
     <img (load)="initTwenty()" src={{tabHomeContent.NowImg}}>
     </div>
   </div>
-  <p style="padding-right: 16px; padding-left: 16px;">{{tabHomeContent.Text}}</p>
-  <div>
-    <button style="background-color: transparent;
-                   text-decoration: underline;
-                   color: #488aff;
-                   line-height: 1.5;
-                   font-size: 1.5rem;
-                   float: right;
-                   padding-right: 16px;"
-            (click)="Navigation()">{{'DIRECTIONS' | translate}}</button>
-    <ion-icon style="float: right;
-                     line-height: 1.5;
-                     text-decoration: underline;
-                     color: #488aff;"
-              name="map"></ion-icon>
-  </div>
+  <p style="padding-right: 16px; padding-left: 16px; font-family: Roboto!important; margin-bottom:50px;">{{tabHomeContent.Text}}</p>
+ <!-- <div style="float: right;">
+    <button ion-button (click)="Navigation()">{{'DIRECTIONS' | translate}}</button>
+  </div>-->
+  <ion-fab bottom right>
+    <button style="font-family: Coda;" (click)="Navigation()" ion-fab color="med-blue">{{'DIRECTIONS' | translate}}</button>
+  </ion-fab>
 </ion-content>

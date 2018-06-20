@@ -44,8 +44,12 @@ $colors: (
   danger:     #f53d3d,
   light:      #f4f4f4,
   dark:       #222,
-  dark-blue: #00466a,
-  light-blue: #e2eef5
+  dark-blue:  #193441,
+ // dark-blue: #00466a,
+  med-blue:   #3E606F,
+  light-blue: #e2eef5,
+  background-light: #D1DBBD,
+
 );
 
 
@@ -94,3 +98,4 @@ $colors: (
 @import "roboto";
 @import "noto-sans";
 @import url('https://fonts.googleapis.com/css?family=Arima+Madurai:500');
+@import url('https://fonts.googleapis.com/css?family=Coda|Roboto');
