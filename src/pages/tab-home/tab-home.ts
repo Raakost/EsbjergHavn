@@ -38,7 +38,7 @@ export class TabHomePage {
     var lat = this.tabHomeContent.Latitude;
     var long = this.tabHomeContent.Longitude;
 
-    var havneCoords = lat.toString() + ", " + long.toString();
+    var havneCoords = lat + "," + long;
     this.launchNavigator.navigate(havneCoords);
   }
 

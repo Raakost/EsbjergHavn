@@ -1,6 +1,6 @@
 export class TabsHomePageModel {
 
-  constructor(id: number, text: string, beforeImg: string, nowImg: string, longitude: number, latitude: number) {
+  constructor(id: number, text: string, beforeImg: string, nowImg: string, longitude: string, latitude: string) {
     this.Id = id;
     this.Text = text;
     this.BeforeImg = beforeImg;
@@ -13,8 +13,8 @@ export class TabsHomePageModel {
   Text: string;
   BeforeImg: string;
   NowImg: string;
-  Latitude: number;
-  Longitude: number;
+  Latitude: string;
+  Longitude: string;
 
 
 }
