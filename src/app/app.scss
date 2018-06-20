@@ -14,6 +14,9 @@
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
 
+ion-app .nav-decor{
+  background-color: transparent !important;
+}
 
 // Change color on all icons!
 ion-icon{
@@ -25,17 +28,17 @@ ion-icon{
   top: 10px !important;
   left: 150px !important;
 }
-
+/*
 .scroll-content {
-  background-color: #eaf6fe;
+  background-color: #FCFFF5;
 }
 
 .item-md {
-  background-color: #eaf6fe;
+  background-color: #FCFFF5;
 }
 
 .popover-viewport {
-  background-color: #eaf6fe;
+  background-color: #FCFFF5;
 }
-
+*/
 

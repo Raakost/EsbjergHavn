@@ -4,13 +4,13 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title style="font-family: roboto sans-serif, Arima Madurai;">{{'APP_TITLE' | translate}}</ion-title>
+    <ion-title style="font-family:Coda;">{{'APP_TITLE' | translate}}</ion-title>
   </ion-navbar>
 </ion-header>
 
 <!-- Page Content -->
-<ion-content *ngIf="content">
+<ion-content class="bg" *ngIf="content">
     <img src={{content.Img}}>
-  <h4 style="padding-left: 16px; padding-right: 16px;">{{content.Title}}</h4>
-  <p style="padding-left: 16px; padding-right: 16px;">{{content.Text}}</p>
+  <h4 style="padding-left: 16px; padding-right: 16px; font-family: Coda;">{{content.Title}}</h4>
+  <p style="padding-left: 16px; padding-right: 16px; font-family: Roboto;">{{content.Text}}</p>
 </ion-content>

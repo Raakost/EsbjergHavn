@@ -3,18 +3,17 @@
 </ion-header>
 
 <!-- Page Content -->
-<ion-content padding>
+<ion-content padding class="bg">
   <ion-card *ngFor="let item of tabContent" style="border-radius:2px;">
     <img src="{{item.Img}}"/>
     <ion-card-content>
-      <!--<ion-card-title>{{item.Title}}</ion-card-title>-->
-      <p>{{item.Text}}</p>
+      <ion-card-title>{{item.Title}}</ion-card-title>
+      <p style="font-family: Roboto;!important;">{{item.Text}}</p>
       <div *ngIf="item.Video">
         <a href="{{item.Video}}">{{'VIDEO-LINK' | translate}}</a>
       </div>
     </ion-card-content>
   </ion-card>
   <ion-card style="box-shadow: 0 0 0 0 rgba(0, 0, 0, 0), 0 0 0 0 rgba(0, 0, 0, 0), 0 0 0 0 rgba(0, 0, 0, 0);">
-    <button color="dark-blue" hidden ion-button full>Klik her for at se hele interviewet!</button>
   </ion-card>
 </ion-content>

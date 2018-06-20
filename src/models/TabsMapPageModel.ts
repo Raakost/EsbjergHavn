@@ -1,10 +1,12 @@
+import {PastPresentModel} from "./PastPresentModel";
+
 export class TabsMapPageModel {
 
-  constructor(id: number, map: string) {
+  constructor(id: number, map: string, markers: Array<PastPresentModel>) {
     this.Id = id;
-    this.Map = map;;
+    this.Markers = markers;
   }
 
   Id: number;
-  Map: string;
+  Markers: Array<PastPresentModel>;
 }
