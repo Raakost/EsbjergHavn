@@ -76,9 +76,17 @@ export class TabMapPage {
         };
 
         const infoWindow = new HtmlInfoWindow();
-        infoWindow.setContent(`<div style="width:250px;">
-<p><strong>${marker.Title}</strong></p> 
-<p style="width: 300px;"><img src="${marker.Img}" style="float:left; vertical-align: text-top; width:70px;">${marker.Text}</p></div>`);
+        var box = document.createElement("div");
+        box.style.width = "250px";
+        //box.style.height = "150px";
+        box.innerHTML = `
+        <div class="info-box clearfix">
+          <img src="${marker.Img}"/>
+          <h6>${marker.Title}</h6>
+          <p>${marker.Text}</p>
+        </div>
+        `;
+        infoWindow.setContent(box);
 
         map.addMarker(markerOptions).then((mapMarker: Marker) => {
           const observable = mapMarker.on(GoogleMapsEvent.MARKER_CLICK);

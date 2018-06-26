@@ -3,5 +3,31 @@ page-tab-map {
   .bg {
     background: linear-gradient(to top, #c5e7f7 0%, #fff 40%);
   }
+  .clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+  }
 
+  .info-box {
+    position: relative;
+    img {
+      display: inline-block;
+      width: 35%;
+      float: left;
+    }
+    p, h6 {
+      display: inline-block;
+      margin: 0;
+      padding-left: 6px;
+      width: 65%
+    }
+
+    h6 {
+      font-weight: bold;
+    }
+  }
 }
