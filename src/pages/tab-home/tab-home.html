@@ -11,7 +11,8 @@
     <img (load)="initTwenty()" src={{tabHomeContent.NowImg}}>
     </div>
   </div>
-  <p style="padding-right: 16px; padding-left: 16px; font-family: Roboto!important; margin-bottom:50px;">{{tabHomeContent.Text}}</p>
+  <div style="padding-left: 16px; padding-right: 16px; font-family: Roboto!important;" [innerHtml]="tabHomeContent.Text"></div>
+  <!--<p style="padding-right: 16px; padding-left: 16px; font-family: Roboto!important; margin-bottom:50px;">{{tabHomeContent.Text}}</p>-->
  <!-- <div style="float: right;">
     <button ion-button (click)="Navigation()">{{'DIRECTIONS' | translate}}</button>
   </div>-->
