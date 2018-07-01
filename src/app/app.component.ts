@@ -68,5 +68,3 @@ export class MyApp {
     this.nav.push(page.component, page.data);
   }
 }
-
-/*<preference name="StatusBarBackgroundColor" value="#193441"/> <preference name="StatusBarStyle" value="#FFFFFF" />*/
